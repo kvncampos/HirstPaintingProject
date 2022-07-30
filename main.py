@@ -2,10 +2,12 @@ import turtle as t
 import random
 import colorgram
 
+# Establish Colormode for RGB to work
 t.colormode(255)
 
 
 def random_color():
+    """Random RGB Generator"""
     r = random.randint(0, 255)
     g = random.randint(0, 255)
     b = random.randint(0, 255)
@@ -14,6 +16,7 @@ def random_color():
 
 
 def image_color():
+    """Gets Random colors from the Image"""
     random_image_color = random.choice(colors)
     # print(random_image_color.rgb.r, random_image_color.rgb.g, random_image_color.rgb.b)
     return random_image_color.rgb.r, random_image_color.rgb.g, random_image_color.rgb.b
@@ -41,6 +44,7 @@ def draw_dot(space, x):
         t.left(90)
 
 
+# Extract the image colors to 6 colors.
 colors = colorgram.extract("image.jpg", 6)
 
 image_color()
